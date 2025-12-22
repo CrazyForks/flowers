@@ -14,6 +14,8 @@
 
 </div>
 
+> ⚠️ **分支说明**：这是 `video` 分支，包含实验性的**视频字幕翻译**功能。此分支与 `main` 分支保持分离，用于测试目的，在充分测试完成之前不会合并。如果您遇到任何问题，请反馈。
+
 ---
 
 ## ✨ 功能特性
@@ -26,6 +28,7 @@
 - **💬 RAG 问答** - 基于个人知识库的智能对话
 - **🎨 自定义提示词** - 为每个工作流编辑和管理 AI 提示词
 - **🔄 多设备同步** - 跨设备同步您的笔记
+- **🎬 视频字幕翻译** *（video 分支）* - 在 YouTube 等平台上实时 AI 翻译视频字幕
 
 ### 🚀 亮点
 
@@ -41,24 +44,59 @@
 ## 📸 界面预览
 
 ### 🌐 智能翻译
+
 在网页上选中任意文本，即可获得基于上下文的 AI 智能翻译。
 
 <img src="./docs/screenshots/翻译.png" alt="翻译功能" width="600">
 
 ### 💬 RAG 问答
+
 基于个人知识库进行智能对话。AI 会从您的笔记中检索相关上下文，提供准确的答案。
 
 <img src="./docs/screenshots/聊天.png" alt="聊天界面" width="600">
 
 ### 📝 笔记生成
+
 从网页内容自动生成结构化笔记，支持 AI 摘要和关键信息提取。
 
 <img src="./docs/screenshots/总览.png" alt="笔记生成" width="600">
 
 ### 📚 笔记管理
+
 浏览、搜索和管理您的笔记，支持标签筛选、日历视图和全文搜索。
 
 <img src="./docs/screenshots/笔记.png" alt="笔记管理" width="600">
+
+---
+
+## 🎬 视频字幕翻译 *（video 分支）*
+
+此分支包含实验性的实时视频字幕翻译功能。主要特性：
+
+<img src="./docs/screenshots/字幕翻译.png" alt="视频字幕翻译" width="600">
+
+- **🎯 自动检测** - 自动检测 YouTube 等平台上有字幕的视频
+- **🔘 开关按钮** - 播放器内的开关按钮，用于启用/禁用翻译
+- **📝 智能批处理** - 智能地批量处理流式字幕以提高翻译效率
+- **🎨 叠加显示** - 在视频上以美观的叠加层显示翻译字幕
+- **⚡ 缓存机制** - 缓存翻译结果以避免冗余的 API 调用
+- **🌐 语言同步** - 自动使用设置中的首选语言
+
+### 支持的平台
+
+| 平台 | 字幕来源 | 状态 |
+|---------|--------|------|
+| YouTube | DOM 字幕 | ✅ 已支持 |
+| YouTube | TextTrack API | ✅ 已支持 |
+| 通用 | TextTrack API | ✅ 已支持 |
+| Netflix | - | 🚧 计划中 |
+
+### 使用方法
+
+1. 导航到已启用字幕的 YouTube 视频
+2. 在视频播放器控件中找到 **🌐 翻译** 图标
+3. 点击图标启用实时字幕翻译
+4. 翻译字幕将以黄色叠加层显示在原始字幕上方
 
 ---
 
@@ -70,6 +108,7 @@
 ├──────────────────┬──────────────────┬───────────────────┤
 │   内容脚本       │   侧边栏         │  Service Worker   │
 │   (划词 UI)      │   (工作区)       │  (API 桥接)       │
+│   (视频翻译)     │                  │                   │
 └────────┬─────────┴────────┬─────────┴─────────┬─────────┘
          │                  │                   │
          └──────────────────┼───────────────────┘
@@ -193,6 +232,13 @@ flowers/
 │   │   ├── components/  # React 组件
 │   │   ├── background/  # Service Worker
 │   │   ├── content/     # 内容脚本
+│   │   │   └── video/   # 视频字幕翻译（video 分支）
+│   │   │       ├── VideoSubtitleDetector.ts      # 视频字幕检测器
+│   │   │       ├── SubtitleExtractor.ts          # 字幕提取器
+│   │   │       ├── SubtitleTranslator.ts         # 字幕翻译器
+│   │   │       ├── SubtitleOverlayRenderer.ts    # 字幕叠加渲染器
+│   │   │       ├── SubtitleToggleButton.ts       # 字幕开关按钮
+│   │   │       └── VideoSubtitleTranslationManager.ts  # 统一管理器
 │   │   └── sidepanel/   # 主工作区
 │   └── package.json
 │
@@ -303,7 +349,7 @@ A: 可以！使用笔记页面的导出按钮，将所有笔记下载为 Markdow
 
 - **问题反馈**: [GitHub Issues](https://github.com/snailfrying/flowers/issues)
 - **讨论区**: [GitHub Discussions](https://github.com/snailfrying/flowers/discussions)
-- **邮箱**: <snailfryiing@gmail.com>
+- **邮箱**: <snailfrying@gmail.com>
 
 ---
 

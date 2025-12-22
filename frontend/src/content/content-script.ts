@@ -1091,3 +1091,14 @@ if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.onMessage)
 // Debug beacon removed completely
 
 // Event listeners attached (log suppressed)
+
+// Initialize Video Subtitle Translation
+import('./video/VideoSubtitleTranslationManager').then(({ VideoSubtitleTranslationManager }) => {
+  try {
+    const videoSubtitleManager = new VideoSubtitleTranslationManager();
+    videoSubtitleManager.init();
+  } catch (e) {
+    console.error('[Chroma] Failed to initialize VideoSubtitleTranslationManager', e);
+  }
+}).catch(err => console.error('[Chroma] Failed to load VideoSubtitleTranslationManager module', err));
+

@@ -104,6 +104,7 @@ export interface TranslateParams {
   // Optional human-readable source language name to guide dictionary prompts
   sourceLang?: string;
   llmConfig?: LLMConfig;
+  mode?: 'default' | 'subtitle';
 }
 
 export interface PolishParams {
