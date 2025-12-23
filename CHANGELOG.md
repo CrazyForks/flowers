@@ -48,9 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [video branch] - 2025-12-22
-
-> ⚠️ This is an experimental branch for testing. Not merged into main yet.
+## [0.2.0] - 2025-12-23
 
 ### Added
 
@@ -69,7 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✅ Generic videos (TextTrack API)
 - 🚧 Netflix (Planned)
 
-### Full Page Translation (video branch)
+### Full Page Translation
 
 - 🌐 **Full Page Translation**: Bilingual comparison mode for entire webpages
   - **NodeSelector**: Intelligent content identification with developer-focused filtering
@@ -114,4 +112,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+[0.2.0]: https://github.com/snailfrying/flowers/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/snailfrying/flowers/releases/tag/v0.1.0

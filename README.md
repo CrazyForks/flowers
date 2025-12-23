@@ -14,8 +14,6 @@
 
 </div>
 
-> ⚠️ **Branch Notice**: This is the `video` branch, which includes experimental **Video Subtitle Translation** feature. This branch is kept separate from `main` for testing purposes and will not be merged until the feature is thoroughly tested. Please report any issues you encounter.
-
 ---
 
 ## ✨ Features
@@ -28,7 +26,7 @@
 - **💬 RAG-Powered Chat** - Ask questions grounded in your personal knowledge base
 - **🎨 Customizable Prompts** - Edit and manage AI prompts for each workflow
 - **🔄 Multi-Device Sync** - Keep your notes synchronized across devices
-- **🎬 Video Subtitle Translation** *(video branch)* - Real-time AI translation of video subtitles on YouTube and other platforms
+- **🎬 Video Subtitle Translation** - Real-time AI translation of video subtitles on YouTube and other platforms
 - **🌐 Full Page Translation** - Bilingual comparison mode with **Technical Content Protection** (skips code/math/diagrams) and **Smart Batching**
 
 ### 🚀 Highlights
@@ -61,6 +59,34 @@ Translate entire webpages into a bilingual comparison format. Unlike standard tr
 
 <img src="./docs/screenshots/全屏翻译.png" alt="Full Page Translation" width="600">
 
+### 🎬 Video Subtitle Translation
+
+Flowers includes high-performance real-time video subtitle translation. Key features:
+
+<img src="./docs/screenshots/字幕翻译.png" alt="Video Subtitle Translation" width="600">
+
+- **🎯 Auto-Detection** - Automatically detects videos with subtitles on YouTube and other platforms
+- **🔘 Toggle Button** - In-player toggle button to enable/disable translation
+- **📝 Real-time Batching** - Intelligently buffers and batches streaming subtitles to handle fast-paced dialogue without losing context.
+- **🎨 Overlay Display** - Shows translated subtitles as a stylish, non-blocking overlay on the video.
+- **⚡ Caching & Sync** - Caches translations to avoid redundant API calls and automatically uses your preferred language from Settings.
+
+#### Supported Platforms
+
+| Platform | Subtitle Source | Status |
+|----------|----------------|--------|
+| YouTube  | DOM Captions   | ✅ Supported |
+| YouTube  | TextTrack API  | ✅ Supported |
+| Generic  | TextTrack API  | ✅ Supported |
+| Netflix  | -              | 🚧 Planned |
+
+#### How to Use
+
+1. Navigate to a YouTube video with subtitles enabled
+2. Look for the **🌐 Translation** icon in the video player controls
+3. Click the icon to enable real-time subtitle translation
+4. Translated subtitles will appear as a yellow overlay above the original subtitles
+
 ### 💬 RAG-Powered Chat
 
 Ask questions grounded in your personal knowledge base. The AI retrieves relevant context from your notes to provide accurate answers.
@@ -78,51 +104,6 @@ Automatically generate structured notes from web content with AI-powered summari
 Browse, search, and manage your notes with tags, calendar view, and full-text search capabilities.
 
 <img src="./docs/screenshots/笔记管理.png" alt="Notes Management" width="600">
-
----
-
-## 🎬 Video Subtitle Translation *(video branch)*
-
-This branch includes experimental real-time video subtitle translation. Key features:
-
-<img src="./docs/screenshots/字幕翻译.png" alt="Video Subtitle Translation" width="600">
-
-- **🎯 Auto-Detection** - Automatically detects videos with subtitles on YouTube and other platforms
-- **🔘 Toggle Button** - In-player toggle button to enable/disable translation
-- **📝 Real-time Batching** - Intelligently buffers and batches streaming subtitles to handle fast-paced dialogue without losing context.
-- **🎨 Overlay Display** - Shows translated subtitles as a stylish, non-blocking overlay on the video.
-- **⚡ Caching & Sync** - Caches translations to avoid redundant API calls and automatically uses your preferred language from Settings.
-
-### Supported Platforms
-
-| Platform | Subtitle Source | Status |
-|----------|----------------|--------|
-| YouTube  | DOM Captions   | ✅ Supported |
-| YouTube  | TextTrack API  | ✅ Supported |
-| Generic  | TextTrack API  | ✅ Supported |
-| Netflix  | -              | 🚧 Planned |
-
-### How to Use
-
-1. Navigate to a YouTube video with subtitles enabled
-2. Look for the **🌐 Translation** icon in the video player controls
-3. Click the icon to enable real-time subtitle translation
-4. Translated subtitles will appear as a yellow overlay above the original subtitles
-
----
-
-## 🎬 Experimental: Video Subtitle Translation
-
-> 💡 **Want real-time video subtitle translation?** Check out the [`video` branch](https://github.com/snailfrying/flowers/tree/video)!
-
-The `video` branch includes an experimental feature for translating video subtitles in real-time on YouTube and other platforms. Features include auto-detection of subtitles, in-player toggle button, smart batching, and stylish overlay display.
-
-```bash
-# To try the video subtitle translation feature:
-git checkout video
-```
-
-<img src="./docs/screenshots/字幕翻译.png" alt="Video Subtitle Translation" width="600">
 
 ---
 
@@ -258,7 +239,7 @@ flowers/
 │   │   ├── components/  # React components
 │   │   ├── background/  # Service worker
 │   │   ├── content/     # Content scripts
-│   │   │   └── video/   # Video subtitle translation (video branch)
+│   │   │   └── video/   # Video subtitle translation
 │   │   │       ├── VideoSubtitleDetector.ts
 │   │   │       ├── SubtitleExtractor.ts
 │   │   │       ├── SubtitleTranslator.ts
