@@ -91,19 +91,19 @@ Flowers 包含高性能的实时视频字幕翻译功能。主要特性：
 
 基于个人知识库进行智能对话。AI 会从您的笔记中检索相关上下文，提供准确的答案。
 
-<img src="./docs/screenshots/聊天.png" alt="聊天界面" width="600">
+<img src="./docs/screenshots/聊天.png" alt="聊天界面" width="400">
 
 ### 📝 笔记生成
 
 从网页内容自动生成结构化笔记，支持 AI 摘要和关键信息提取。
 
-<img src="./docs/screenshots/总览.png" alt="笔记生成" width="600">
+<img src="./docs/screenshots/总览.png" alt="笔记生成" width="400">
 
 ### 📚 笔记管理
 
 浏览、搜索和管理您的笔记，支持标签筛选、日历视图和全文搜索。
 
-<img src="./docs/screenshots/笔记管理.png" alt="笔记管理" width="600">
+<img src="./docs/screenshots/笔记管理.png" alt="笔记管理" width="400">
 
 ---
 

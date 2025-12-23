@@ -91,19 +91,19 @@ Flowers includes high-performance real-time video subtitle translation. Key feat
 
 Ask questions grounded in your personal knowledge base. The AI retrieves relevant context from your notes to provide accurate answers.
 
-<img src="./docs/screenshots/聊天.png" alt="Chat Interface" width="600">
+<img src="./docs/screenshots/聊天.png" alt="Chat Interface" width="400">
 
 ### 📝 Note Generation
 
 Automatically generate structured notes from web content with AI-powered summarization and key information extraction.
 
-<img src="./docs/screenshots/总览.png" alt="Note Generation" width="600">
+<img src="./docs/screenshots/总览.png" alt="Note Generation" width="400">
 
 ### 📚 Note Management
 
 Browse, search, and manage your notes with tags, calendar view, and full-text search capabilities.
 
-<img src="./docs/screenshots/笔记管理.png" alt="Notes Management" width="600">
+<img src="./docs/screenshots/笔记管理.png" alt="Notes Management" width="400">
 
 ---
 
